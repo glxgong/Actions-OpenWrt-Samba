@@ -18,3 +18,6 @@
 
 # Modify hostname
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
+
+# Disable kernel modules that consume too much disk space
+echo '# CONFIG_PACKAGE_kmod-r8125 is not set' >> .config
